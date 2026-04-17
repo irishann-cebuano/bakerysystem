@@ -2,7 +2,7 @@
 
 let selectedRecordId = null;
 
-// Load Daily Records
+
 function normalizeDate(dateStr) {
     if (!dateStr) return "(No Date)";
     const d = new Date(dateStr);
