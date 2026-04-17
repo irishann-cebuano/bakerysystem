@@ -34,7 +34,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'fetch') {
     $stmt = $conn->query("SELECT category_id, category_name FROM tb_category ORDER BY category_id ASC");
     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // If no categories exist, insert default ones
+  
     if (empty($categories)) {
         $defaultCategories = ['Supply', 'Ingredients', 'Labor', 'Utilities', 'Production/Packaging'];
         $stmt = $conn->prepare("INSERT INTO tb_category (category_name) VALUES (?)");
