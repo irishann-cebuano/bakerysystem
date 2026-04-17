@@ -17,7 +17,7 @@ function loadDashboard() {
         
     };
 
-    // Fetch daily records
+  
     $.get("/bakery_records_system/php/dailyrec.php", function(data) {
         const records = data.records || [];
 
@@ -37,7 +37,7 @@ function loadDashboard() {
             }   
         });
 
-        // Fetch labor records to sum today's labor cost
+       
         $.get("/bakery_records_system/php/laborrec.php?action=fetch", function(laborData) {
             const laborRecords = laborData.records || [];
 
