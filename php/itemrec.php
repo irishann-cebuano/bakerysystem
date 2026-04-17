@@ -46,7 +46,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'fetch') {
     exit;
 }
 
-// Helper for category id lookup by name
+
 function lookupCategoryId($conn, $category_name) {
     $stmt = $conn->prepare("SELECT category_id FROM tb_category WHERE category_name = ? LIMIT 1");
     $stmt->execute([$category_name]);
