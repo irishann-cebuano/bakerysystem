@@ -23,7 +23,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete') {
         exit;
     }
 
-    // delete related labor first
+   
     $conn->prepare("DELETE FROM tb_labor WHERE record_id = ?")->execute([$record_id]);
 
     // delete main record
