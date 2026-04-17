@@ -48,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $action !== 'update') {
 
     $total_pay = $hours_worked * $rate_per_hour;
 
-    // latest record auto-link
     $stmt = $conn->prepare("SELECT record_id FROM tb_daily_rec ORDER BY record_id DESC LIMIT 1");
     $stmt->execute();
     $record = $stmt->fetch(PDO::FETCH_ASSOC);
